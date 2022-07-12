@@ -1,0 +1,9 @@
+html,
+body,
+#root {
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
