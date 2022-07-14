@@ -1,7 +1,6 @@
-import {FieldValues, useForm, UseFormProps} from 'react-hook-form';
-import {UseFormReturn} from 'react-hook-form/dist/types';
+import {FieldValues, useForm, UseFormProps, UseFormReturn} from 'react-hook-form';
+import {yupResolver} from '@hookform/resolvers/yup';
 import {SchemaOf} from 'yup';
-import {yupResolver} from './yup-resolver';
 
 export type UseValidationForm<TFieldValues extends FieldValues = FieldValues, TContext extends object = object> = Omit<UseFormProps<TFieldValues, TContext>, 'resolver'>
 & {schema: SchemaOf<TFieldValues>};

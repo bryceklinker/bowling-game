@@ -1,9 +1,10 @@
-const path = require('path');
+import path from 'path';
+
 module.exports = {
     preset: 'ts-jest',
     restoreMocks: true,
     resetMocks: true,
-    coverage: true,
+    collectCoverage: true,
     testEnvironment: 'jsdom',
     setupFilesAfterEnv: [
         '<rootDir>/testing/jest.setup.ts'

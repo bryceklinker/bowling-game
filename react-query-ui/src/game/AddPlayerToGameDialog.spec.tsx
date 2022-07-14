@@ -13,11 +13,11 @@ describe('AddPlayerToGameDialog', () => {
         });
 
         await userEvent.type(screen.getByLabelText('Name'), 'Bob');
-        await waitFor(() => expect(screen.getByRole('button', {name: 'save player'})).toBeEnabled());
+        await waitFor(() => expect(screen.getByRole('button', {name: 'save player'})).not.toBeDisabled());
         await userEvent.click(screen.getByRole('button', {name: 'save player'}));
 
         await waitFor(() => expect(onClose).toHaveBeenCalled());
-    });
+    }, 10000);
 
     test('when cancelled then closes modal', async () => {
         const onClose = jest.fn();
